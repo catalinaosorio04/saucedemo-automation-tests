@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="15.972" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-07-21T23:48:40.169927400Z">
+<testcase classname="Shopping cart functionality" name="Add single product to cart" time="2.643">
+<system-out><![CDATA[
+Given I am logged in as "standard_user" with password "secret_sauce"........passed
+And I am on the products page...............................................passed
+When I add "Sauce Labs Backpack" to the cart................................passed
+Then the cart badge should show "1".........................................passed
+And I go to the cart page...................................................passed
+Then I should see "Sauce Labs Backpack" in the cart.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart functionality" name="Add multiple products to cart" time="1.91">
+<system-out><![CDATA[
+Given I am logged in as "standard_user" with password "secret_sauce"........passed
+And I am on the products page...............................................passed
+When I add the following products to cart:..................................passed
+Then the cart badge should show "3".........................................passed
+And I go to the cart page...................................................passed
+Then I should see all added products in the cart............................passed
+]]></system-out>
+</testcase>
+<testcase classname="End to end shopping flow" name="Complete purchase flow" time="1.827">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I login with username "standard_user" and password "secret_sauce"......passed
+And I add "Sauce Labs Backpack" to the cart.................................passed
+And I add "Sauce Labs Bike Light" to the cart...............................passed
+And I go to the cart page...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Successful login with valid credentials" time="1.674">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "standard_user" and password "secret_sauce"...........passed
+And I click the login button................................................passed
+Then I should be redirected to the products page............................passed
+And I should see the products inventory.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with invalid credentials" time="1.57">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "invalid_user" and password "wrong_password"..........passed
+And I click the login button................................................passed
+Then I should see an error message "Epic sadface: Username and password do not match any user in this service".passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with missing credentials - #1.1" time="1.552">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "" and password "secret_sauce"........................passed
+And I click the login button................................................passed
+Then I should see an error message "Epic sadface: Username is required".....passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with missing credentials - #1.2" time="1.566">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "standard_user" and password "".......................passed
+And I click the login button................................................passed
+Then I should see an error message "Epic sadface: Password is required".....passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with missing credentials - #1.3" time="1.514">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "" and password ""....................................passed
+And I click the login button................................................passed
+Then I should see an error message "Epic sadface: Username is required".....passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with locked user" time="1.552">
+<system-out><![CDATA[
+Given I am on the SauceDemo login page......................................passed
+When I enter username "locked_out_user" and password "secret_sauce".........passed
+And I click the login button................................................passed
+Then I should see an error message "Epic sadface: Sorry, this user has been locked out.".passed
+]]></system-out>
+</testcase>
+</testsuite>
