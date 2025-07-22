@@ -71,10 +71,9 @@ Checkout E2E
 ✅ Validación de información de checkout
 ✅ Confirmación de orden
 
+📂 Cómo usar este repositorio
 
-## 📂 Cómo usar este repositorio
+Clona el repositorio:
 
-1. Clona el repositorio:
-
-clone https://github.com/catalinaosorio04/saucedemo-automation-tests.git
+git clone https://github.com/catalinaosorio04/saucedemo-automation-tests.git
 
