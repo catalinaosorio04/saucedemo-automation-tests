@@ -1,6 +1,6 @@
 # 💻 Repositorio SauceDemo Automation Tests
 
-Suite de automatización de pruebas para la aplicación e-commerce SauceDemo. El proyecto implementa pruebas automatizadas para las funcionalidades principales de la plataforma.
+Automatización de pruebas para la aplicación e-commerce SauceDemo. El proyecto implementa pruebas automatizadas para las funcionalidades principales de la plataforma.
 
 ---
 
