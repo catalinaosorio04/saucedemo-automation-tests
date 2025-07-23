@@ -8,9 +8,6 @@ Suite de automatización de pruebas para la aplicación e-commerce SauceDemo. El
 
 - Page Object Model (POM): Para mantener el código organizado y reutilizable
 - BDD: Con Cucumber para casos de prueba legibles
-- Selenium WebDriver: Para la automatización de pruebas web
-- TestNG: Para la gestión de assertions
-- Gradle: Como gestor de dependencias y build tool
 
 ---
 
@@ -19,8 +16,8 @@ Suite de automatización de pruebas para la aplicación e-commerce SauceDemo. El
 - Java: Lenguaje de programación
 - Selenium WebDriver: Automatización de navegadores web
 - Cucumber: Framework BDD para escribir pruebas en lenguaje natural
-- TestNG: Framework de testing para Java
-- Gradle: Herramienta de construcción y gestión de dependencias
+- TestNG: Para la gestión de assertions
+- Gradle: Como gestor de dependencias
 - WebDriverManager: Gestión automática de drivers de navegadores
 
 ---
