@@ -22,15 +22,14 @@ public class ProductsPage extends BasePage {
     private WebElement productsPageTitle;
 
 
-    public ProductsPage(WebDriver driver){
+    public ProductsPage(WebDriver driver) {
         super(driver);
     }
 
     public boolean isProductsPageDisplayed() {
         try {
-
             wait.until(ExpectedConditions.visibilityOf(productsPageTitle));
-            return productsPageTitle.isDisplayed() && productsPageTitle.getText().equals("Products"); // Ajusta "Products" si el texto del título es diferente
+            return productsPageTitle.isDisplayed() && productsPageTitle.getText().equals("Products");
         } catch (org.openqa.selenium.TimeoutException e) {
             return false;
         }

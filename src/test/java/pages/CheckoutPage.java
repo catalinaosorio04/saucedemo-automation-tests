@@ -74,7 +74,7 @@ public class CheckoutPage extends BasePage {
         super(driver);
     }
 
-    // Métodos para la página de información personal (Step 1)
+
     public void fillCheckoutInformation(String firstName, String lastName, String postalCode) {
         waitForElement(firstNameField);
         firstNameField.clear();
@@ -243,7 +243,6 @@ public class CheckoutPage extends BasePage {
         }
     }
 
-    // Métodos de utilidad
     public String getCurrentStepTitle() {
         try {
             WebElement titleElement = driver.findElement(org.openqa.selenium.By.cssSelector(".title"));

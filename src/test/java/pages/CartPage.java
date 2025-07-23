@@ -18,7 +18,7 @@ public class CartPage extends BasePage {
     @FindBy(id = "checkout")
     private WebElement checkoutButton;
 
-    @FindBy(css = ".cart_button") // Estos son los botones de "Remove" en el carrito
+    @FindBy(css = ".cart_button")
     private List<WebElement> removeButtons;
 
 
@@ -33,7 +33,6 @@ public class CartPage extends BasePage {
             return false; // No hay ítems en el carrito
         }
 
-        // Espera a que los elementos del carrito estén visibles para asegurar que la lista esté cargada
         wait.until(ExpectedConditions.visibilityOfAllElements(currentCartItems));
 
         for (WebElement item : currentCartItems) {
@@ -43,7 +42,7 @@ public class CartPage extends BasePage {
                     return true;
                 }
             } catch (org.openqa.selenium.NoSuchElementException e) {
-                System.err.println("Advertencia: Un elemento de carrito no contiene el nombre del producto esperado.");
+                System.err.println("Un elemento de carrito no contiene el nombre del producto esperado.");
             }
         }
         return false;
